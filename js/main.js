@@ -268,7 +268,7 @@ $(document).ready(function(){
     	sendButton.value = 'Sending..';
 
     	var xhr = new XMLHttpRequest();
-    	xhr.open('POST', '//formspree.io/schmeer.tyler@gmail.com', true);
+    	xhr.open('POST', '//formspree.io/antonschmeer@protonmail.ch', true);
     	xhr.setRequestHeader("Accept", "application/json");
     	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 

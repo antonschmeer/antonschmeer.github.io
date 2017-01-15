@@ -19,6 +19,7 @@ $(document).ready(function(){
 		};
 		if(!(in_contact_form && ($(this).attr('title') === 'Contact'))){
 			$('.contact-form').fadeOut(500);
+			$('#send-button').fadeOut(500);
 		};
 	});
 
@@ -52,7 +53,8 @@ $(document).ready(function(){
 			in_images_gallery = false;			
 		}
 		if(in_contact_form){
-			$('.contact-form').empty();
+			$('.contact-form').fadeOut(300);
+			$('#send-button').fadeOut(300);
 			in_contact_form = false;			
 		}
 		if(in_about){
@@ -86,7 +88,8 @@ $(document).ready(function(){
 			in_images_gallery = false;			
 		}
 		if(in_contact_form){
-			$('.contact-form').empty();
+			$('.contact-form').fadeOut(300);
+			$('#send-button').fadeOut(300);
 			in_contact_form = false;			
 		}
 		if(in_about){
@@ -119,7 +122,8 @@ $(document).ready(function(){
 			in_music_listing = false;			
 		}
 		if(in_contact_form){
-			$('.contact-form').empty();
+			$('.contact-form').fadeOut(300);
+			$('#send-button').fadeOut(300);
 			in_contact_form = false;			
 		}
 		if(in_about){
@@ -160,7 +164,8 @@ $(document).ready(function(){
 			in_about = false;
 		}
 
-		$('.contact-form').fadeIn(600);		
+		$('.contact-form').fadeIn(600);	
+		$('#send-button').fadeIn(600);	
 		in_contact_form = true;
 
 		var viewportWidth = $(window).width();
@@ -255,7 +260,7 @@ $(document).ready(function(){
 	    replyTo = contactForm.querySelector('[name="_replyto"]'),
 	    subject = contactForm.querySelector('[name="_subject"]'),
  	    message = contactForm.querySelector('[name="message"]'),
-	    sendButton = contactForm.querySelector('#send-button');
+	    sendButton = document.querySelector('#send-button');
 
     sendButton.addEventListener('click', function(event){
     	event.preventDefault(); // prevent the form from posting

@@ -401,7 +401,7 @@
 
     <div class="contact-form">
 
-      <form action="https://formspree.io/antonschmeer@protonmail.ch" method="POST">
+      <form id="contact-me-form" action="https://formspree.io/antonschmeer@protonmail.ch" method="POST">
           <span class="input input--manami">
               <input class="input__field input__field--manami" type="text" name="name" />
               <label class="input__label input__label--manami" for="input-32">
@@ -426,13 +426,14 @@
                   <span class="input__label-content input__label-content--manami">Your message</span>
               </label>
           </span>
-          <input type="text" name="_gotcha" style="display:none" />
-          <input id="send-button" class="contact-submit" type="submit" value="Send"></button>
+          <input type="text" name="_gotcha" style="display:none" />          
       </form>
 
     </div>
 
   </div> <!-- end wrapper -->
+
+  <input id="send-button" class="contact-submit" type="submit" value="Send" form="contact-me-form">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>

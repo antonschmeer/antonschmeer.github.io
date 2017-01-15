@@ -41,7 +41,7 @@ $(document).ready(function(){
 	});
 	
 	$('.music').on('click', function(){
-		$('.music-listing').html('<a target="_blank" href="#">All</a><a target="_blank" href="https://antonschmeer.github.io/patroklos/">Patroklos</a>');
+		$('.music-listing').html('<a target="_blank" href="https://antonschmeer.github.io/music/">All</a><a target="_blank" href="https://antonschmeer.github.io/patroklos/">Patroklos</a>');
 		in_videos_listing = true;
 
 		var viewportWidth = $(window).width();

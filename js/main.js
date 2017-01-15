@@ -171,7 +171,7 @@ $(document).ready(function(){
 		var viewportWidth = $(window).width();
 		if(viewportWidth < 369){
 			var container = $('.wrapper'),
-			    scrollTo = $('.contact-form');
+			    scrollTo = $('.contact-form-your-name');
 
 			container.animate({
 			    scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() - 40

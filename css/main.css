@@ -243,7 +243,12 @@ span.heading-contact {
 
 .videos-listing a:hover, .music-listing a:hover {
     cursor: pointer;
-    background-color: rgba(204, 126, 131, 0.5);
+}
+
+@media screen and (min-width: 414px){
+    .videos-listing a:hover, .music-listing a:hover {
+        background-color: rgba(204, 126, 131, 0.5);
+    }
 }
 
 .images-gallery {

@@ -61,7 +61,8 @@ $(document).ready(function(){
 		}
 
 		$('.music-listing').html('<a target="_blank" href="https://antonschmeer.github.io/music/">All</a><a target="_blank" href="https://antonschmeer.github.io/patroklos/">Patroklos</a>');
-		in_videos_listing = true;
+		
+		in_music_listing = true;
 
 		var viewportWidth = $(window).width();
 		if(viewportWidth < 369){

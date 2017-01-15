@@ -4,6 +4,7 @@ $(document).ready(function(){
 	var in_music_listing = false;
 	var in_images_gallery = false;
 	var in_contact_form = false;
+	var in_about = false;
 
 	$('.icon').on('mouseenter', function(){
 		$('.link-title').text($(this).attr('title'));
@@ -41,6 +42,24 @@ $(document).ready(function(){
 	});
 	
 	$('.music').on('click', function(){
+
+		if(in_videos_listing){
+			$('.videos-listing').empty();
+			in_videos_listing = false;			
+		}
+		if(in_images_gallery){
+			$('.images-gallery').empty();
+			in_images_gallery = false;			
+		}
+		if(in_contact_form){
+			$('.contact-form').empty();
+			in_contact_form = false;			
+		}
+		if(in_about){
+			$('.about-section').empty();
+			in_about = false;
+		}
+
 		$('.music-listing').html('<a target="_blank" href="https://antonschmeer.github.io/music/">All</a><a target="_blank" href="https://antonschmeer.github.io/patroklos/">Patroklos</a>');
 		in_videos_listing = true;
 
@@ -56,6 +75,24 @@ $(document).ready(function(){
 	});
 
 	$('.videos').on('click', function(){
+
+		if(in_music_listing){
+			$('.music-listing').empty();
+			in_music_listing = false;			
+		}
+		if(in_images_gallery){
+			$('.images-gallery').empty();
+			in_images_gallery = false;			
+		}
+		if(in_contact_form){
+			$('.contact-form').empty();
+			in_contact_form = false;			
+		}
+		if(in_about){
+			$('.about-section').empty();
+			in_about = false;
+		}
+
 		$('.videos-listing').html('<a href="#">Video 1</a><a href="#">Video 2</a><a href="#">Video 3</a><a href="#">Video 4</a><a href="#">Video 5</a>');
 		in_videos_listing = true;
 
@@ -71,6 +108,24 @@ $(document).ready(function(){
 	});
 
 	$('.images').on('click', function(){
+
+		if(in_videos_listing){
+			$('.videos-listing').empty();
+			in_videos_listing = false;			
+		}
+		if(in_music_listing){
+			$('.music-listing').empty();
+			in_music_listing = false;			
+		}
+		if(in_contact_form){
+			$('.contact-form').empty();
+			in_contact_form = false;			
+		}
+		if(in_about){
+			$('.about-section').empty();
+			in_about = false;
+		}
+
 		$('.images-gallery').fadeIn(1200);		
 		in_images_gallery = true;
 
@@ -86,6 +141,24 @@ $(document).ready(function(){
 	});
 
 	$('.email-icon').on('click', function(){
+
+		if(in_videos_listing){
+			$('.videos-listing').empty();
+			in_videos_listing = false;			
+		}
+		if(in_images_gallery){
+			$('.images-gallery').empty();
+			in_images_gallery = false;			
+		}
+		if(in_music_listing){
+			$('.music-listing').empty();
+			in_music_listing = false;			
+		}
+		if(in_about){
+			$('.about-section').empty();
+			in_about = false;
+		}
+
 		$('.contact-form').fadeIn(600);		
 		in_contact_form = true;
 

@@ -48,7 +48,7 @@ $(document).ready(function(){
 			in_videos_listing = false;			
 		}
 		if(in_images_gallery){
-			$('.images-gallery').empty();
+			$('.images-gallery').fadeOut(300);
 			in_images_gallery = false;			
 		}
 		if(in_contact_form){
@@ -82,7 +82,7 @@ $(document).ready(function(){
 			in_music_listing = false;			
 		}
 		if(in_images_gallery){
-			$('.images-gallery').empty();
+			$('.images-gallery').fadeOut(300);
 			in_images_gallery = false;			
 		}
 		if(in_contact_form){
@@ -148,7 +148,7 @@ $(document).ready(function(){
 			in_videos_listing = false;			
 		}
 		if(in_images_gallery){
-			$('.images-gallery').empty();
+			$('.images-gallery').fadeOut(300);
 			in_images_gallery = false;			
 		}
 		if(in_music_listing){

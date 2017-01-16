@@ -165,14 +165,7 @@ $(document).ready(function(){
 		}
 
 		$('.contact-form').fadeIn(600);	
-
-		$('#send-button')
-		  .css('opacity', 0)
-		  .slideDown('slow')
-		  .animate(
-		    { opacity: 1 },
-		    { queue: false, duration: 'slow' }
-		  );
+		$('#send-button').fadeIn(600);		  
 
 		in_contact_form = true;
 

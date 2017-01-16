@@ -165,7 +165,15 @@ $(document).ready(function(){
 		}
 
 		$('.contact-form').fadeIn(600);	
-		$('#send-button').fadeIn(600);	
+
+		$('#send-button')
+		  .css('opacity', 0)
+		  .slideDown('slow')
+		  .animate(
+		    { opacity: 1 },
+		    { queue: false, duration: 'slow' }
+		  );
+
 		in_contact_form = true;
 
 		var viewportWidth = $(window).width();

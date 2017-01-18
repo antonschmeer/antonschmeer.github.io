@@ -326,6 +326,9 @@ $(document).ready(function(){
     		}
     		else {
     			sendButton.value = 'Error!';
+    			setTimeout(function(){
+    				sendButton.value = 'Send';
+    			}, 4000);
     		}
     	}
 

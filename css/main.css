@@ -166,6 +166,13 @@ span.heading-contact {
     display: inline;
 }
 
+.icon-container {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    top: 70px;
+}
+
 .icon {
     width: 40px;
     height: auto;
@@ -192,6 +199,9 @@ span.heading-contact {
 }
 
 @media screen and (max-width: 368px) { 
+    .icon-container {
+        display: block;
+    }
     .icon {
         display: block;
         margin-left: 40px;

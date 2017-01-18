@@ -1,5 +1,21 @@
 $(document).ready(function(){
 
+	var aboutTween 	  = $('.about');
+	var musicTween    = $('.music');
+	var videosTween   = $('.videos');
+	var imagesTween   = $('.images');
+	var writingTween  = $('.writing');
+	var contactTween  = $('.email-icon');
+
+	var tween;
+
+	tween = TweenMax.to(aboutTween, .6, {y:-70, opacity:1});
+	tween = TweenMax.to(musicTween, .8, {y:-70, opacity:1});
+	tween = TweenMax.to(videosTween, 1.1, {y:-70, opacity:1});
+	tween = TweenMax.to(imagesTween, 1.4, {y:-70, opacity:1});
+	tween = TweenMax.to(writingTween, 1.8, {y:-70, opacity:1});
+	tween = TweenMax.to(contactTween, 2.3, {y:-70, opacity:1});
+
 	var in_videos_listing = false;
 	var in_music_listing = false;
 	var in_images_gallery = false;
@@ -97,7 +113,7 @@ $(document).ready(function(){
 			in_about = false;
 		}
 
-		$('.videos-listing').html('<a href="#">Video 1</a><a href="#">Video 2</a><a href="#">Video 3</a><a href="#">Video 4</a><a href="#">Video 5</a>');
+		$('.videos-listing').html('<a href="https://www.youtube.com/v/gi-5kxqL_C0" target="_blank">Initiative 189</a><a href="#">Video 2</a><a href="#">Video 3</a><a href="#">Video 4</a><a href="#">Video 5</a>');
 		in_videos_listing = true;
 
 		var viewportWidth = $(window).width();

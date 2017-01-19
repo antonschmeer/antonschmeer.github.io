@@ -100,6 +100,7 @@ textarea {
     left: 15px;
     top: 2px;
     z-index: 999;
+    opacity: 0;
     pointer-events: none;
 }
 

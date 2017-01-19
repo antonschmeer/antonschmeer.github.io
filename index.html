@@ -464,6 +464,12 @@
     var contactTween  = $('.email-icon');
     var keyImg = $('.key_img');
 
+    $("<img/>")
+        .on('load', function() { var keyTween; keyTween = TweenMax.to(keyImg, .6, {opacity:.2}); })
+        .on('error', function() { console.log("error loading key_img"); })
+        .attr("src", $('.key_img').attr("src"))
+    ;
+
     var iconTweenStart = function(){
         
         var tween;

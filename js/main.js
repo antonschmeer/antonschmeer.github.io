@@ -59,13 +59,44 @@ $(document).ready(function(){
 	;
 
 	var iconTweenStart = function(){
-		if(aboutLoaded && musicLoaded && videosLoaded && imagesLoaded && writingLoaded && contactLoaded){
-			
-			$('.loading').empty();
+		if(aboutLoaded && musicLoaded && videosLoaded && imagesLoaded && writingLoaded && contactLoaded){						
 
 			var tween;
 
 			$(window).on("load", function(){
+				
+				setTimeout(function(){
+					$('.loading').text("loading ..");
+				}, 50);
+				setTimeout(function(){
+					$('.loading').text("loading .");
+				}, 100);
+				setTimeout(function(){
+					$('.loading').text("loading");
+				}, 150);
+				setTimeout(function(){
+					$('.loading').text("loadin");
+				}, 200);
+				setTimeout(function(){
+					$('.loading').text("loadi");
+				}, 250);
+				setTimeout(function(){
+					$('.loading').text("load");
+				}, 300);
+				setTimeout(function(){
+					$('.loading').text("loa");
+				}, 350);
+				setTimeout(function(){
+					$('.loading').text("lo");
+				}, 400);
+				setTimeout(function(){
+					$('.loading').text("l");
+				}, 450);
+				setTimeout(function(){
+					$('.loading').text("");
+				}, 500);
+				$('.loading').empty();
+
 				setTimeout(function(){
 					tween = TweenMax.to(aboutTween, .5, {y:-70, opacity:1});
 					tween = TweenMax.to(musicTween, .7, {y:-70, opacity:1});

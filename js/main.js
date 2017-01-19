@@ -70,7 +70,7 @@ $(document).ready(function(){
 					tween = TweenMax.to(imagesTween, 1.1, {y:-70, opacity:1});
 					tween = TweenMax.to(writingTween, 1.4, {y:-80, opacity:1});
 					tween = TweenMax.to(contactTween, 1.8, {y:-90, opacity:1});				
-				}, 600);				
+				}, 100);				
 			});
 		}
 		else {

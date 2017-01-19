@@ -62,12 +62,15 @@ $(document).ready(function(){
 		if(aboutLoaded && musicLoaded && videosLoaded && imagesLoaded && writingLoaded && contactLoaded){
 			var tween;
 
-			tween = TweenMax.to(aboutTween, .5, {y:-70, opacity:1});
-			tween = TweenMax.to(musicTween, .7, {y:-70, opacity:1});
-			tween = TweenMax.to(videosTween, .9, {y:-70, opacity:1});
-			tween = TweenMax.to(imagesTween, 1.1, {y:-70, opacity:1});
-			tween = TweenMax.to(writingTween, 1.4, {y:-80, opacity:1});
-			tween = TweenMax.to(contactTween, 1.8, {y:-90, opacity:1});
+			setTimeout(function(){
+				tween = TweenMax.to(aboutTween, .5, {y:-70, opacity:1});
+				tween = TweenMax.to(musicTween, .7, {y:-70, opacity:1});
+				tween = TweenMax.to(videosTween, .9, {y:-70, opacity:1});
+				tween = TweenMax.to(imagesTween, 1.1, {y:-70, opacity:1});
+				tween = TweenMax.to(writingTween, 1.4, {y:-80, opacity:1});
+				tween = TweenMax.to(contactTween, 1.8, {y:-90, opacity:1});				
+			}, 300);
+
 		}
 		else {
 			return;

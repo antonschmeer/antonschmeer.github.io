@@ -108,14 +108,6 @@ textarea {
   opacity: 0;
 }
 
-.wf-active .heading {
-  opacity: 1;
-  -webkit-transition: opacity 0.8s ease-out;  
-  -moz-transition: opacity 0.8s ease-out; 
-  -o-transition: opacity 0.8s ease-out;  
-  transition: opacity 0.8s ease-out; 
-}
-
 span.my-name {
     position: fixed;
 }
@@ -294,6 +286,14 @@ span.heading-contact {
 #send-button {
     font-family: 'TIActuBetaMono-Thin_web';
     display: none;
+}
+
+.wf-active .heading {
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease-out;  
+  -moz-transition: opacity 0.8s ease-out; 
+  -o-transition: opacity 0.8s ease-out;  
+  transition: opacity 0.8s ease-out; 
 }
 
 

@@ -452,7 +452,6 @@
   <script type="text/javascript" src="lightgallery-static/js/jquery.justifiedGallery.min.js"></script>
   <script type="text/javascript" src="lightgallery/js/lightgallery.js"></script>
   <script type="text/javascript" src="js/vendor/jquery.mousewheel.min.js"></script>
-  <script type="text/javascript" src="lightgallery-static/js/lightgallery-init.js"></script>
   <script type="text/javascript" src="js/vendor/classie.js"></script>
   <script type='application/javascript' src='js/vendor/fastclick.js'></script>
   <script src="js/main.js"></script>
@@ -510,10 +509,24 @@
         }, 100);    
     };
 
+    window.prettyPrint && prettyPrint()
+
     $(window).bind("load", function(){
         iconTweenStart();
+        setTimeout(function(){
+            // Animated thumbnails
+            var $animThumb = $('#animated-thumbnails');
+            if ($animThumb.length) {
+                $animThumb.justifiedGallery({
+                    border: 6
+                }).on('jg.complete', function() {
+                    $animThumb.lightGallery({
+                        thumbnail: true
+                    });
+                });
+            };                       
+        }, 10); 
     });
-
   </script>
 </body>
 </html>

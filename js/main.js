@@ -64,7 +64,7 @@ $(document).ready(function(){
 			var tween;
 
 			$(window).on("load", function(){
-				
+
 				setTimeout(function(){
 					$('.loading').text("loading ..");
 				}, 50);
@@ -95,7 +95,6 @@ $(document).ready(function(){
 				setTimeout(function(){
 					$('.loading').text("");
 				}, 500);
-				$('.loading').empty();
 
 				setTimeout(function(){
 					tween = TweenMax.to(aboutTween, .5, {y:-70, opacity:1});

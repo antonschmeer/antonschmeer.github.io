@@ -7,10 +7,7 @@ $(document).ready(function(){
 	var writingTween  = $('.writing');
 	var contactTween  = $('.email-icon');
 
-	var headerTween = $('.regular.heading');
-
-	var headerTween;
-	headerTween = TweenMax.to(headerTween, .6, {opacity:1});
+	var keyImg = $('.key_img');
 
 	aboutLoaded = false;
 	musicLoaded = false;
@@ -18,6 +15,12 @@ $(document).ready(function(){
 	imagesLoaded = false;
 	writingLoaded = false;
 	contactLoaded = false;
+
+	$("<img/>")
+	    .on('load', function() { var keyTween; keyTween = TweenMax.to(keyImg, .6, {opacity:.2}); })
+	    .on('error', function() { console.log("error loading image"); })
+	    .attr("src", $('.key_img').attr("src"))
+	;
 
 	$("<img/>")
 	    .on('load', function() { aboutLoaded = true; iconTweenStart(); })
@@ -59,19 +62,17 @@ $(document).ready(function(){
 		if(aboutLoaded && musicLoaded && videosLoaded && imagesLoaded && writingLoaded && contactLoaded){
 			var tween;
 
-			tween = TweenMax.to(aboutTween, .6, {y:-70, opacity:1});
-			tween = TweenMax.to(musicTween, .8, {y:-70, opacity:1});
-			tween = TweenMax.to(videosTween, 1.1, {y:-70, opacity:1});
-			tween = TweenMax.to(imagesTween, 1.4, {y:-70, opacity:1});
-			tween = TweenMax.to(writingTween, 1.8, {y:-70, opacity:1});
-			tween = TweenMax.to(contactTween, 2.3, {y:-70, opacity:1});
+			tween = TweenMax.to(aboutTween, .5, {y:-70, opacity:1});
+			tween = TweenMax.to(musicTween, .7, {y:-70, opacity:1});
+			tween = TweenMax.to(videosTween, .9, {y:-70, opacity:1});
+			tween = TweenMax.to(imagesTween, 1.1, {y:-70, opacity:1});
+			tween = TweenMax.to(writingTween, 1.4, {y:-80, opacity:1});
+			tween = TweenMax.to(contactTween, 1.8, {y:-90, opacity:1});
 		}
 		else {
 			return;
 		}
 	}
-
-	
 
 	var in_videos_listing = false;
 	var in_music_listing = false;

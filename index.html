@@ -43,7 +43,7 @@
                   
   <div class="wrapper">
 
-    <p class="loading">loading ...</p>
+    <p class="loading">loading <span class="loading-periods">...</span></p>
     
     <div class="main-dock">
         <div class="one-icon about icon-container"><img class="icon icon_40 about-icon" src="img/icons/Gender Neutral User-80.svg" title="About" /></div>
@@ -468,6 +468,36 @@
     var loadingTween;
     loadingTween = TweenMax.to(loadingText, 14.8, {rotation:110, y:-120, x:200});
 
+    var periodsInt = function(){
+        var txtOrig = "...";
+        var txt1 = "..&nbsp;";
+        var txt2 = ".&nbsp;&nbsp;";
+        var txt3 = "&nbsp;&nbsp;&nbsp;";
+        setTimeout(function(){
+            $('.loading-periods').html(txt1);
+        }, 150);
+        setTimeout(function(){
+            $('.loading-periods').html(txt2);
+        }, 300);
+        setTimeout(function(){
+            $('.loading-periods').html(txt3);
+        }, 450);
+        setTimeout(function(){
+            $('.loading-periods').html(txt2);
+        }, 600);
+        setTimeout(function(){
+            $('.loading-periods').html(txt1);
+        }, 750);
+        setTimeout(function(){
+            $('.loading-periods').html(txtOrig);
+        }, 900);
+    };
+
+    periodsInt();
+    startPeriodsInt = setInterval(function(){
+        periodsInt();
+    }, 1400);
+
     $("<img/>")
         .on('load', function() { var keyTween; keyTween = TweenMax.to(keyImg, .6, {opacity:.2}); })
         .on('error', function() { console.log("error loading key_img"); })
@@ -479,6 +509,7 @@
         var tween;
 
         setTimeout(function(){
+            clearInterval(startPeriodsInt);
             $('.loading').text("loading ..");
         }, 50);
         setTimeout(function(){

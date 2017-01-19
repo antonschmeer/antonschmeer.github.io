@@ -104,18 +104,6 @@ textarea {
     pointer-events: none;
 }
 
-.wf-loading .heading {
-  opacity: 0;
-}
-
-.wf-active .heading {
-  opacity: 1;
-  -webkit-transition: opacity 0.8s ease-out;  
-  -moz-transition: opacity 0.8s ease-out; 
-  -o-transition: opacity 0.8s ease-out;  
-  transition: opacity 0.8s ease-out; 
-}
-
 span.my-name {
     position: fixed;
 }
@@ -657,4 +645,16 @@ input.contact-submit:active {
 
 input:focus {
     outline:0;
+}
+
+.wf-loading .heading {
+  opacity: 0;
+}
+
+.wf-active .heading {
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease-out;  
+  -moz-transition: opacity 0.8s ease-out; 
+  -o-transition: opacity 0.8s ease-out;  
+  transition: opacity 0.8s ease-out; 
 }

@@ -16,11 +16,11 @@ $(document).ready(function(){
 	writingLoaded = false;
 	contactLoaded = false;
 
-	// $("<img/>")
-	//     .on('load', function() { var keyTween; keyTween = TweenMax.to(keyImg, .6, {opacity:.2}); })
-	//     .on('error', function() { console.log("error loading image"); })
-	//     .attr("src", $('.key_img').attr("src"))
-	// ;
+	$("<img/>")
+	    .on('load', function() { var keyTween; keyTween = TweenMax.to(keyImg, .6, {opacity:.2}); })
+	    .on('error', function() { console.log("error loading image"); })
+	    .attr("src", $('.key_img').attr("src"))
+	;
 
 	$("<img/>")
 	    .on('load', function() { aboutLoaded = true; iconTweenStart(); })

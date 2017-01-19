@@ -1,73 +1,5 @@
 $(document).ready(function(){
 
-	var loading = (function(){
-		$('.loading').text("");
-		setTimeout(function(){
-			$('.loading').text("l");
-		}, 50);
-		setTimeout(function(){
-			$('.loading').text("lo");
-		}, 100);
-		setTimeout(function(){
-			$('.loading').text("loa");
-		}, 150);
-		setTimeout(function(){
-			$('.loading').text("load");
-		}, 200);
-		setTimeout(function(){
-			$('.loading').text("loadi");
-		}, 250);
-		setTimeout(function(){
-			$('.loading').text("loadin");
-		}, 300);
-		setTimeout(function(){
-			$('.loading').text("loading");
-		}, 350);
-		setTimeout(function(){
-			$('.loading').text("loading .");
-		}, 400);
-		setTimeout(function(){
-			$('.loading').text("loading ..");
-		}, 450);
-		setTimeout(function(){
-			$('.loading').text("loading ...");
-		}, 500);
-
-		setTimeout(function(){
-			$('.loading').text("loading ..");
-		}, 550);
-		setTimeout(function(){
-			$('.loading').text("loading .");
-		}, 600);
-		setTimeout(function(){
-			$('.loading').text("loading");
-		}, 650);
-		setTimeout(function(){
-			$('.loading').text("loadin");
-		}, 700);
-		setTimeout(function(){
-			$('.loading').text("loadi");
-		}, 750);
-		setTimeout(function(){
-			$('.loading').text("load");
-		}, 800);
-		setTimeout(function(){
-			$('.loading').text("loa");
-		}, 850);
-		setTimeout(function(){
-			$('.loading').text("lo");
-		}, 900);
-		setTimeout(function(){
-			$('.loading').text("l");
-		}, 950);
-		setTimeout(function(){
-			$('.loading').text("");
-		}, 1000);
-	});
-
-	loading();
-	var loadingInt = setInterval(loading, 1200);
-
 	var aboutTween 	  = $('.about');
 	var musicTween    = $('.music');
 	var videosTween   = $('.videos');
@@ -130,7 +62,6 @@ $(document).ready(function(){
 		if(aboutLoaded && musicLoaded && videosLoaded && imagesLoaded && writingLoaded && contactLoaded){
 			
 			$('.loading').empty();
-			clearInterval(loadingInt);
 
 			var tween;
 

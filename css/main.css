@@ -100,7 +100,6 @@ textarea {
     left: 15px;
     top: 2px;
     z-index: 999;
-    opacity: 0;
     pointer-events: none;
 }
 
@@ -645,16 +644,4 @@ input.contact-submit:active {
 
 input:focus {
     outline:0;
-}
-
-.wf-loading .heading {
-  opacity: 0;
-}
-
-.wf-active .heading {
-  opacity: 1;
-  -webkit-transition: opacity 0.8s ease-out;  
-  -moz-transition: opacity 0.8s ease-out; 
-  -o-transition: opacity 0.8s ease-out;  
-  transition: opacity 0.8s ease-out; 
 }

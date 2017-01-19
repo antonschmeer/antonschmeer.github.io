@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	loadingInt = setInterval(function(){
+	var loading = (function(){
 		$('.loading').text("");
 		setTimeout(function(){
 			$('.loading').text("l");
@@ -63,7 +63,10 @@ $(document).ready(function(){
 		setTimeout(function(){
 			$('.loading').text("");
 		}, 1000);
-	}, 1200);
+	});
+
+	loading();
+	var loadingInt = setInterval(loading, 1200);
 
 	var aboutTween 	  = $('.about');
 	var musicTween    = $('.music');

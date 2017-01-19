@@ -464,6 +464,10 @@
     var contactTween  = $('.email-icon');
     var keyImg = $('.key_img');
 
+    var loadingText = $('.loading');
+    var loadingTween;
+    loadingTween = TweenMax.to(loadingText, 14.8, {rotation:110, y:-120, x:200});
+
     $("<img/>")
         .on('load', function() { var keyTween; keyTween = TweenMax.to(keyImg, .6, {opacity:.2}); })
         .on('error', function() { console.log("error loading key_img"); })
@@ -504,6 +508,9 @@
         setTimeout(function(){
             $('.loading').text("");
         }, 500);
+        setTimeout(function(){
+            $('.loading').empty();
+        }, 510);        
 
         setTimeout(function(){
             tween = TweenMax.to(aboutTween, .5, {y:-70, opacity:1});

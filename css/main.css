@@ -258,6 +258,13 @@ span.heading-contact {
     font-size: 20px;
 }
 
+.about-text {
+    margin-top: 70px;
+    margin-left: 15px;
+    margin-right: 20px;
+    max-width: 600px;
+}
+
 .videos-listing {
     width: 100%;
     margin-top: 70px;

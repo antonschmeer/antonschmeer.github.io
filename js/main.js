@@ -5,9 +5,24 @@ $(document).ready(function(){
 	var in_images_gallery = false;
 	var in_contact_form = false;
 	var in_about = false;
+	
+	$.get('misc/partials/videos.html', function(data) {
+		videos_html = data;
+	});
+
+	$.get('misc/partials/music.html', function(data) {
+		music_html = data;
+	});
+
+	$.get('misc/partials/about.html', function(data) {
+		about_html = data;
+	});
 
 	$('.icon').on('mouseenter', function(){
 		$('.link-title').text($(this).attr('title'));
+		if(!(in_about && ($(this).attr('title') === 'About'))){
+			$('.about-text').empty();
+		};
 		if(!(in_videos_listing && ($(this).attr('title') === 'Videos'))){
 			$('.videos-listing').empty();
 		};
@@ -24,6 +39,10 @@ $(document).ready(function(){
 	});
 
 	$('.icon').on('mouseleave', function(){
+		if(!(in_about && ($(this).attr('title') === 'About'))){
+			$('.link-title').empty();
+			in_about = false;
+		};
 		if(!(in_videos_listing && ($(this).attr('title') === 'Videos'))){
 			$('.link-title').empty();
 			in_videos_listing = false;
@@ -40,6 +59,41 @@ $(document).ready(function(){
 			$('.link-title').empty();
 			in_contact_form = false;
 		};
+	});
+
+	$('.about').on('click', function(){
+
+		if(in_videos_listing){
+			$('.videos-listing').empty();
+			in_videos_listing = false;			
+		}
+		if(in_images_gallery){
+			$('.images-gallery').fadeOut(300);
+			in_images_gallery = false;			
+		}
+		if(in_contact_form){
+			$('.contact-form').fadeOut(300);
+			$('#send-button').fadeOut(300);
+			in_contact_form = false;			
+		}
+		if(in_music_listing){
+			$('.music-listing').empty();
+			in_about = false;
+		}
+
+		$('.about-text').html(about_html);
+		
+		in_about = true;
+
+		var viewportWidth = $(window).width();
+		if(viewportWidth < 369){
+			var container = $('.wrapper');
+			    // scrollTo = $('.about');
+
+			container.animate({
+			    scrollTop: 400
+			});
+		}
 	});
 	
 	$('.music').on('click', function(){
@@ -62,7 +116,7 @@ $(document).ready(function(){
 			in_about = false;
 		}
 
-		$('.music-listing').html('<a target="_blank" href="https://antonschmeer.github.io/music/">All</a><a target="_blank" href="https://antonschmeer.github.io/patroklos/">Patroklos</a>');
+		$('.music-listing').html(music_html);
 		
 		in_music_listing = true;
 
@@ -97,7 +151,7 @@ $(document).ready(function(){
 			in_about = false;
 		}
 
-		$('.videos-listing').html('<a href="https://youtu.be/gi-5kxqL_C0" target="_blank">Initiative 189</a><a href="#">Video 2</a><a href="#">Video 3</a><a href="#">Video 4</a><a href="#">Video 5</a>');
+		$('.videos-listing').html(videos_html);
 		in_videos_listing = true;
 
 		var viewportWidth = $(window).width();

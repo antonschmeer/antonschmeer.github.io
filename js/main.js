@@ -170,7 +170,7 @@ $(document).ready(function(){
 			in_about = false;
 		}
 
-		$('.videos-listing').html('<a href="https://www.youtube.com/v/gi-5kxqL_C0" target="_blank">Initiative 189</a><a href="#">Video 2</a><a href="#">Video 3</a><a href="#">Video 4</a><a href="#">Video 5</a>');
+		$('.videos-listing').html('<a href="https://youtu.be/gi-5kxqL_C0" target="_blank">Initiative 189</a><a href="#">Video 2</a><a href="#">Video 3</a><a href="#">Video 4</a><a href="#">Video 5</a>');
 		in_videos_listing = true;
 
 		var viewportWidth = $(window).width();

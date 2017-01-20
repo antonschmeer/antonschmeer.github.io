@@ -112,7 +112,7 @@ $(document).ready(function(){
 			in_contact_form = false;			
 		}
 		if(in_about){
-			$('.about-section').empty();
+			$('.about-text').empty();
 			in_about = false;
 		}
 
@@ -147,7 +147,7 @@ $(document).ready(function(){
 			in_contact_form = false;			
 		}
 		if(in_about){
-			$('.about-section').empty();
+			$('.about-text').empty();
 			in_about = false;
 		}
 
@@ -181,7 +181,7 @@ $(document).ready(function(){
 			in_contact_form = false;			
 		}
 		if(in_about){
-			$('.about-section').empty();
+			$('.about-text').empty();
 			in_about = false;
 		}
 
@@ -214,7 +214,7 @@ $(document).ready(function(){
 			in_music_listing = false;			
 		}
 		if(in_about){
-			$('.about-section').empty();
+			$('.about-text').empty();
 			in_about = false;
 		}
 

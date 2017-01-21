@@ -308,7 +308,6 @@ $(document).ready(function(){
 	    }
 	})();
 
-
 	/* form submit handlers */
 	var contactForm = document.querySelector('.contact-form'),
 	    inputName = contactForm.querySelector('[name="name"]'),

@@ -18,6 +18,10 @@ $(document).ready(function(){
 		about_html = data;
 	});
 
+	$('.my-name').on('click', function(){
+		window.location.href = "https://antonschmeer.github.io/";
+	})
+
 	$('.icon').on('mouseenter', function(){
 		$('.link-title').text($(this).attr('title'));
 		if(!(in_about && ($(this).attr('title') === 'About'))){

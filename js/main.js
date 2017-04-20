@@ -246,7 +246,7 @@ $(document).ready(function(){
 
 	var name_spin = function(){
 
-		var word = "ANTON SCHMEER";
+		var word = "7عينFѬدالـخ38글우";
 		var wordLength = word.length;
 		var scrambled = "";
 

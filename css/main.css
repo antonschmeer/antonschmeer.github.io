@@ -226,6 +226,11 @@ span.heading-contact {
     bottom: 15px;
 }
 
+.computer-rotating-gif {
+    width: 300px;
+    height: auto;
+}
+
 .main-dock {
     margin-top: 60px;
 }

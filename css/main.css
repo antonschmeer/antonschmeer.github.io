@@ -231,6 +231,7 @@ span.heading-contact {
     right: 0;
     bottom: 0;
     width: 200px;
+    pointer-events: none;
     height: auto;
 }
 

@@ -48,7 +48,8 @@
                   
   <div class="wrapper">
 
-    <p class="loading">loading <span class="loading-periods">...</span><img class="computer-rotating-gif" src="img/icons/computer-rotating.gif" alt="loading"></p>
+    <p class="loading">loading <span class="loading-periods">...</span></p>
+    <img class="computer-rotating-gif" src="img/icons/computer-rotating.gif" alt="loading">
     
     <div class="main-dock">
         <div class="one-icon about icon-container"><img class="icon icon_40 about-icon" src="img/icons/Gender Neutral User-80.svg" title="About" /></div>
@@ -439,6 +440,10 @@
     var loadingTween;
     loadingTween = TweenMax.to(loadingText, 14.8, {rotation:110, y:-120, x:200});
 
+    var computerImg = $('.computer-rotating-gif');
+    var computerTween;
+    computerTween = TweenMax.to(computerImg, 14.8, {rotation:210, y:-220, x:-200});
+
     var periodsInt = function(){
         var txtOrig = "...";
         var txt1 = "..&nbsp;";
@@ -512,7 +517,9 @@
         }, 500);
         setTimeout(function(){
             $('.loading').empty();
-        }, 510);        
+        }, 510);     
+
+        $('.computer-rotating-gif').fadeOut(1200);   
 
         setTimeout(function(){
             tween = TweenMax.to(aboutTween, .5, {y:-70, opacity:1});

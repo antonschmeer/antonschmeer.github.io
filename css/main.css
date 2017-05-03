@@ -236,6 +236,38 @@ span.heading-contact {
     z-index: 999;
 }
 
+.cloud-01 {
+    position: fixed;
+    bottom: 1.5em;
+    left: 0;
+    pointer-events: none;
+    z-index: 999;
+    width: 150px;
+    height: auto;
+}
+
+.cloud-02 {
+    position: fixed;
+    bottom: 3.5em;
+    left: 0;
+    pointer-events: none;
+    z-index: 998;
+    width: 120px;
+    height: auto;
+    opacity: 0.4;
+}
+
+.cloud-03 {
+    position: fixed;
+    bottom: 4.5em;
+    left: 4em;
+    pointer-events: none;
+    z-index: 997;
+    width: 60px;
+    height: auto;
+    opacity: 0.4;
+}
+
 .main-dock {
     margin-top: 60px;
 }

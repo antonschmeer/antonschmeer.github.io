@@ -227,7 +227,10 @@ span.heading-contact {
 }
 
 .computer-rotating-gif {
-    width: 300px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 200px;
     height: auto;
 }
 
